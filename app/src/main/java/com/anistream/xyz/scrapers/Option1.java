@@ -31,7 +31,7 @@ public class Option1 extends Scraper {
 
         try
         {
-            String vidStreamUrl = "https:" + gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
+            String vidStreamUrl = gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
             vidStreamUrl = vidStreamUrl.replace("streaming.php", "loadserver.php");
 
             Document vidStreamPageDocument = Jsoup.connect(vidStreamUrl).get();
