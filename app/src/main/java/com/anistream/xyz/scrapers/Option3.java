@@ -38,7 +38,7 @@ public class Option3 extends Scraper {
 
         ArrayList<Quality> qualities = new ArrayList<>();
         try {
-            String vidStreamUrl = "https:" + gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
+            String vidStreamUrl = gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
             String m3u8Link = "";
             String htmlToParse = "";
             String vidCdnUrl = vidStreamUrl;
